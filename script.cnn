@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --account=soc-kp
+#SBATCH --partition=soc-kp
+#SBATCH --job-name=cs4230_openmp
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=14
+#SBATCH --mem=10G
+#SBATCH --time=00:10:00
+#SBATCH --export=ALL
+ulimit -c unlimited -s
+./cnn_par 128 3 64 112 112 3 3 2 2
+./cnn_par 128 832 128 7 7 1 1 1 1
