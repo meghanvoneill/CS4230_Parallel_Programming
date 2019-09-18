@@ -22,9 +22,9 @@ I have two different sets of code to try addressing this variation. The first us
 
 Version	 Desciption	       	    	       	   	Performance	  Speedup Over Baseline
 Seq	 original sequential code, input 1		.83s		  1.0x
-Par1
-Par2
+Par1     parallelized n-loop 	   	 		.65s		  1.27x
+Par2	 parallelized n-loop and k-loop			.59s		  1.41x
 Par3	 parallelized p-loop with 4 threads and
-	 collapse clause of 2, input 1			.46s		  1.25x
+	 collapse clause of 2, input 1			.46s		  1.80x
 Par4a	 dynamic scheduling on parallelized 		.68s		  1.22x
-Par4b	 static scheduling on parallelized		.57s		  1.38x
+Par4b	 static scheduling on parallelized		.57s		  1.46x
